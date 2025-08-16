@@ -449,6 +449,25 @@ const blogPosts = [
 }
 ];
 
+const slides = document.querySelectorAll('.slide');
+let currentIndex = 0;
+const slideInterval = 5000; // 5000 ms = 5 seconds
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active-slide', i === index);
+  });
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+}
+
+showSlide(currentIndex);
+setInterval(nextSlide, slideInterval);
+
+
 // Select elements
 const openBtn = document.getElementById('previewBookBtn'); // trigger button
 const modal = document.getElementById('pdfModal');         // overlay container
@@ -456,8 +475,6 @@ const modalContent = document.getElementById('pdfModalContent'); // modal box
 const closeBtn = document.getElementById('closePdfModal'); // close button
 const pdfViewer = document.getElementById('pdfViewer');
 const pdfLoading = document.getElementById('pdfLoading');
-document.body.classList.add('modal-open');   // when opening modal
-document.body.classList.remove('modal-open'); // when closing modal
 
 
 let lastFocusedElement = null; // store to restore focus later
@@ -468,6 +485,12 @@ function openModal() {
   modal.classList.add('active');
   modal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('modal-open');
+document.getElementById('previewBookBtn').addEventListener('click', function() {
+  const modal = document.getElementById('pdfModal');
+  const modalContent = document.getElementById('pdfModalContent');
+  modal.classList.add('active');
+  modalContent.focus(); // Move keyboard focus into dialog
+});
 
   // Show loader, hide iframe until loaded
   pdfLoading.style.display = 'block';
@@ -489,6 +512,10 @@ function closeModal() {
   modal.classList.remove('active');
   modal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('modal-open');
+document.getElementById('closePdfModal').addEventListener('click', function() {
+  document.getElementById('pdfModal').classList.remove('active');
+  document.getElementById('previewBookBtn').focus();
+});
 
   // Empty iframe src to stop background fetch
   pdfViewer.src = '';
