@@ -20,15 +20,15 @@ const blogPosts = [
         <p class="post-meta">
           <time datetime="2025-01-15">January&nbsp;15,&nbsp;2025</time> • 8&nbsp;min read
         </p>
-      </header>
+      </header
 
-  <figure class="post-hero">
-    <img src="./img/anxiety/top.png"
-         alt="Symptoms of anxiety illustration" 
-         loading="lazy"
-         onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/3c145327-83c6-4d3e-b6da-57b711d7ef93.png'" />
-    <figcaption class="sr-only">Illustration highlighting common anxiety symptoms</figcaption>
-  </figure>
+      <figure class="post-hero">
+        <img src="./img/anxiety/top.png"
+            alt="Symptoms of anxiety illustration" 
+            loading="lazy"
+            onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/3c145327-83c6-4d3e-b6da-57b711d7ef93.png'" />
+        <figcaption class="sr-only">Illustration highlighting common anxiety symptoms</figcaption>
+      </figure>
 
       <section class="post-section">
         <h2>Introduction</h2>
@@ -40,9 +40,16 @@ const blogPosts = [
         <h2>Understanding Anxiety</h2>
         <p>Anxiety is more than just feeling nervous before a big presentation or worried about an upcoming deadline. While occasional anxiety is a normal part of life, anxiety disorders involve persistent, excessive worry that interferes with daily activities. It can manifest as racing thoughts, physical symptoms like rapid heartbeat or sweating, restlessness, difficulty concentrating, or even avoidance of certain situations that may indicate an anxiety disorder that requires attention and care.</p>
         <p>Unlike temporary stress, anxiety disorders are persistent and can significantly impact your quality of life, relationships, and overall wellbeing if left untreated.</p>
+
+        <figure class="post-media">
+          <img src="./img/anexity/types_disorder.png"
+               alt="Illustration of anxiety disorder types" 
+         loading="lazy"
+         onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/8055612d-6de9-4e24-963c-c3dd011ee994.png'" />
+        </figure> 
       </section>
 
-      <section class="post-section two-column">
+      <section class="post-section">
         <div class="post-text">
           <h2>Common Types of Anxiety Disorders</h2>
           <ul class="blog-list">
@@ -53,12 +60,6 @@ const blogPosts = [
             <li><strong>Separation Anxiety:</strong> Excessive fear about being apart from loved ones, not limited to children but can affect adults too.</li>
           </ul>
         </div>
-        <figure class="post-media">
-          <img src="./img/anexity/types_disorder.png"
-               alt="Illustration of anxiety disorder types" 
-         loading="lazy"
-         onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/8055612d-6de9-4e24-963c-c3dd011ee994.png'" />
-        </figure>
       </section>
 
       <section class="post-section">
@@ -153,7 +154,7 @@ const blogPosts = [
       "self-esteem",
       "youth psychology",
     ],
-    previewImage: "/img/social_media_scroll/cover.jpeg",
+    previewImage: "./img/social_media_scroll/cover.jpeg",
     date: "2025-01-10",
     readTime: "6 min read",
     date: "2025-01-10",
@@ -167,7 +168,7 @@ const blogPosts = [
       </header>
 
       <figure class="post-hero">
-        <img src="./img/social_media_scroll/sec.png"
+        <img src="./img/social_media_scroll/sec.jpeg"
              alt="Social media scrolling addiction illustration" />
         <figcaption class="sr-only">Illustration depicting endless social media scrolling behavior</figcaption>
       </figure>
@@ -208,7 +209,7 @@ const blogPosts = [
         </ul>
       </section>
 
-      <section class="post-section two-column">
+      <section class="post-section">
         <div class="post-text">
           <h2>The Addiction to Scrolling</h2>
           <p>Youngsters spend an average of 3 to 4 hours daily scrolling through social media feeds without realizing how much time is wasted on unwanted content. Endless scrolling keeps them glued to their screens, consuming content that adds little value to their personal growth or well-being.</p>
@@ -265,229 +266,187 @@ const blogPosts = [
   `,
   },
   {
-    id: 3,
-    title: "The Art of Mindful Communication",
-    summary:
-      "Learn how mindfulness practices can transform your relationships by improving listening skills, emotional awareness, and authentic connection.",
-    category: "Relationships",
-    tags: ["mindfulness", "communication", "relationships"],
-    previewImage:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=250&fit=crop",
-    date: "2025-01-05",
-    readTime: "7 min read",
-    content: `
-      <div class="post-meta" style="display: flex; gap: 16px; margin-bottom: 24px; font-size: 14px; color: var(--color-text-secondary);">
-        <span class="post-date">January 5, 2025</span>
-        <span class="post-read-time">7 min read</span>
-        <span class="post-category" style="background: var(--color-bg-3); padding: 4px 8px; border-radius: 12px;">Relationships</span>
-      </div>
-      <h1 style="margin-bottom: 24px; color: var(--color-text);">The Art of Mindful Communication</h1>
-      
-      <p>Mindful communication involves being fully present, listening actively, and responding thoughtfully rather than reactively in our interactions with others.</p>
-      
-      <h2>Core Principles</h2>
-      <ul>
-        <li><strong>Present Moment Awareness</strong> - staying focused during conversations</li>
-        <li><strong>Active Listening</strong> - truly hearing what others are saying</li>
-        <li><strong>Emotional Awareness</strong> - recognizing your own emotional states</li>
-        <li><strong>Non-Judgmental Approach</strong> - accepting others without immediate criticism</li>
-      </ul>
-      
-      <h2>The Power of Presence</h2>
-      <p>When we're truly present in conversations, we create space for deeper understanding and connection. This means putting away distractions and giving our full attention to the person speaking.</p>
-      
-      <h2>Developing Active Listening Skills</h2>
-      <h3>Listen to Understand, Not to Reply</h3>
-      <p>Focus on genuinely understanding the other person's perspective rather than formulating your response while they're speaking.</p>
-      
-      <h3>Use Reflective Listening</h3>
-      <p>Paraphrase what you've heard to ensure understanding: "What I'm hearing is..." or "It sounds like you're feeling..."</p>
-      
-      <h3>Ask Open-Ended Questions</h3>
-      <p>Encourage deeper sharing with questions that can't be answered with a simple yes or no.</p>
-      
-      <h2>Managing Emotional Reactions</h2>
-      <p>When conversations become challenging, practice the pause-breathe-respond technique. This creates space between stimulus and response, allowing for more thoughtful communication.</p>
-      
-      <h2>Practical Applications</h2>
-      <p>Start by practicing the pause-breathe-respond technique. Before reacting to challenging conversations, take a moment to breathe and choose your response mindfully.</p>
-      
-      <p>Mindful communication is a skill that improves with practice. Start with small interactions and gradually apply these principles to more challenging conversations.</p>
-    `,
-  },
+  id: 3,
+  title: "The Art of Crying for Men: Why the Strongest Men Are the Ones Who Dare to Cry",
+  summary: "Society teaches men that tears are weakness. But the strongest men know the truth: vulnerability isn't fragility—it's courage, and it heals everything.",
+  category: "Relationships",
+  tags: ["male mental health", "emotional vulnerability", "masculinity", "crying", "emotional healing"],
+  previewImage: "https://imgs.search.brave.com/Q06IpriAy25xKuu-DbJhQ11-40dv8sFAya5dQQCGVmY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9kZXByZXNzZWQt/bWFuLWNyeWluZy1z/aWRlLXZpZXdfNzM4/OTktOTk1Ni5qcGc_/c2VtdD1haXNfaHli/cmlkJnc9NzQw",
+  date: "2025-01-16",
+  readTime: "12 min read",
+  content: `
+    <article class="post" id="post-crying-men">
+      <header class="post-header">
+        <h1 class="post-title">The Art of Crying for Men</h1>
+        <p class="post-meta">
+          <time datetime="2025-01-16">January&nbsp;16,&nbsp;2025</time> • 12&nbsp;min read
+        </p>
+      </header>
+
+      <figure class="post-hero">
+        <img src="./img/crying_men/hero.png"
+             alt="Man in emotional contemplation showing vulnerability" 
+             loading="lazy"
+             onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/ae3fc0c8-2dfa-4232-ae58-07455308ad9c.png'" />
+        <figcaption class="sr-only">Professional representation of male emotional vulnerability</figcaption>
+      </figure>
+
+      <section class="post-section">
+        <h2>Introduction: A Quiet Struggle</h2>
+        <p>From a young age, most boys receive an unspoken rule: don't cry. Not because they don't feel pain, but because they're expected to manage it in silence. As they grow, those unspoken rules become habits. Men are often told to be strong, hold it together, and not let emotions get in the way. But inside, many men feel everything — deeply, powerfully, and painfully.</p>
+        <p>It's not that they don't want to cry. It's that they've learned to control the urge so well, even they start to believe they're not supposed to feel that much.</p>
+      </section>
+
+      <section class="post-section">
+        <h2>What Men Really Feel But Rarely Say</h2>
+        <p>Men feel sadness just like anyone else — from losing someone, from heartbreak, from disappointment, from carrying too much. They feel pressure to succeed, guilt when they fail, fear of not being enough, and sometimes a deep loneliness that they can't explain to anyone. They feel misunderstood, overlooked, and burdened by responsibilities that no one sees.</p>
+        <p>They long to be heard, to be seen, to be held without being judged. But they rarely say these things out loud. Instead, they push it down, tell themselves to "move on" or "be a man," and keep going. Not because they want to — but because they've been taught that this is the only way to survive.</p>
+      </section>
+
+      <section class="post-section">
+        <h2>The Emotional Control in Public Spaces</h2>
+        <p>In public, men become masters of self-control. They'll sit in a meeting after receiving devastating news. They'll smile at friends while going through a breakup. They'll joke around while quietly struggling with mental health. They know how to shift focus, change topics, and keep their expressions neutral.</p>
+        <p>There's a fear that if they cry, they'll be seen as unstable or weak. So instead, they build masks — polite, professional, calm, collected. Even when their chest feels heavy and their eyes start to burn, they excuse themselves, take deep breaths, and shut it down. No one notices the storm inside, because they've gotten so good at hiding it.</p>
+
+        <figure class="post-media">
+          <img src="./img/crying_men/public_mask.png"
+               alt="The contrast between public composure and private emotions" 
+               loading="lazy"
+               onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/f0bd9db5-fe6c-46d2-b253-160b37ab2125.png'" />
+        </figure>
+      </section>
+
+      <section class="post-section">
+        <h2>The Difference Behind Closed Doors</h2>
+        <p>When men are alone, the story is different. That's when the silence gets louder. That's when the pressure finally has space to breathe. Some cry quietly in their rooms, in the shower, or in their cars. Others don't cry, but feel a deep emotional ache that never goes away. Some release it through music, journaling, or exercise. Others bottle it up until it becomes anger or numbness.</p>
+        <p>The hardest part is that even in private, many still feel ashamed of crying. They look in the mirror and wonder, "What's wrong with me?" — not realizing that what they're feeling is normal. They're not broken. They're just human.</p>
+      </section>
+
+      <section class="post-section">
+        <h2>Why They Hide Their Emotions</h2>
+        <p>Men hide their emotions for many reasons. Some are afraid of being judged, especially by people they love. Others don't want to seem weak or vulnerable, because they're used to being the one who supports everyone else. Many have never learned the language of emotions, so even when they want to open up, they don't know how.</p>
+        <p>Sometimes, they feel like no one would understand anyway. And often, they feel like they don't have the right to break down when others around them are also struggling. So instead of reaching out, they stay quiet. And that silence becomes their coping mechanism.</p>
+      </section>
+
+      <section class="post-section">
+        <h2>The Weight of Always Being "Okay"</h2>
+        <p>Being the one who always seems okay can be exhausting. Men often carry emotional weight without realizing how heavy it's become. They push through work, show up for others, and keep their emotions locked away, telling themselves they're fine. But over time, the weight builds.</p>
+        <p>The nights become harder. The emotions start to show up in other ways — short tempers, anxiety, fatigue, or a general feeling of emptiness. They begin to feel disconnected — from themselves, from the people around them, even from life. And yet, they continue, because it feels safer to pretend than to be vulnerable.</p>
+      </section>
+
+      <section class="post-section">
+        <h2>Why Crying is Not a Weakness But a Release</h2>
+        <p>Crying isn't a loss of strength. It's a release of the pressure that's been building for too long. It's not a breakdown — it's the body's way of healing. When men allow themselves to cry, they aren't falling apart. They're finally allowing what's inside to come out, so it stops hurting them from within.</p>
+        <p>It's not about falling into sadness. It's about giving sadness a place to exist so that it can pass. Crying resets the nervous system, lowers stress, and allows a deeper connection to self. It makes room for healing — the kind that can't happen when everything is locked away.</p>
+
+      </section>
+
+      <section class="post-section">
+        <h2>Rewriting the Narrative of Strength</h2>
+        <p>Strength isn't about how long someone can hide their feelings. Real strength is being honest with yourself. It's choosing to say, "I'm not okay," and trusting that it doesn't make you any less of a man. Men need spaces where they can feel — without judgment, without shame, and without pressure to be anything other than real.</p>
+        <p>When a man cries, he's not breaking down — he's breaking open. That's when healing starts. That's when connection deepens. That's when the walls fall, and what's left is truth, clarity, and emotional freedom.</p>
+      </section>
+
+      <section class="post-section">
+        <div class="post-text">
+          <h2>Final Words: There's Nothing Wrong With Feeling</h2>
+
+          <h3>You Are Not Alone</h3>
+          <p>To every man who has held back tears in front of others… to every man who has cried quietly with no one around… to every man who feels too much but says too little — you are not alone. What you feel is real. Your emotions matter.</p>
+
+          <h3>Permission to Feel</h3>
+          <p>You don't need to hide them. You don't need to apologize for them. You don't need to pretend. The next time it rises — the tightness in your chest, the lump in your throat, the tears you try to blink away — let it out. Let yourself cry.</p>
+
+          <h3>This Is Strength</h3>
+          <p>It doesn't make you weak. It doesn't make you fragile. It makes you human. And that is powerful.</p>
+        </div>
+      </section>
+
+      <section class="post-section">
+        <h2>Conclusion</h2>
+        <p>The art of crying for men isn't about weakness — it's about courage. It's about choosing authenticity over performance, healing over hiding, and connection over isolation. In a world that has taught men to suppress their emotions, choosing to feel and express them becomes a radical act of self-love and strength.</p>
+        <p>Every tear shed in honesty is a step toward freedom. Every moment of vulnerability is a bridge to deeper connection. Every man who chooses to break the silence makes it easier for others to do the same.</p>
+        <p>The strongest men aren't those who never cry — they're the ones who dare to feel everything, express it authentically, and heal openly. They're the ones who understand that being human isn't a weakness to hide, but a gift to embrace.</p>
+      </section>
+    </article>
+  `
+},
   {
-    id: 4,
-    title: "Embracing Change: Psychology of Personal Growth",
-    summary:
-      "Understand the psychological processes behind personal transformation and learn practical strategies for embracing change as a pathway to growth.",
-    category: "Personal Growth",
-    tags: ["personal growth", "change", "psychology"],
-    previewImage:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400&h=250&fit=crop",
-    date: "2024-12-28",
-    readTime: "9 min read",
-    content: `
-      <div class="post-meta" style="display: flex; gap: 16px; margin-bottom: 24px; font-size: 14px; color: var(--color-text-secondary);">
-        <span class="post-date">December 28, 2024</span>
-        <span class="post-read-time">9 min read</span>
-        <span class="post-category" style="background: var(--color-bg-4); padding: 4px 8px; border-radius: 12px;">Personal Growth</span>
-      </div>
-      <h1 style="margin-bottom: 24px; color: var(--color-text);">Embracing Change: Psychology of Personal Growth</h1>
-      
-      <p>Change is a fundamental part of human experience, yet many of us resist it. Understanding the psychological mechanisms behind change can help us navigate transitions more effectively.</p>
-      
-      <h2>Stages of Change</h2>
-      <ul>
-        <li><strong>Contemplation</strong> - recognizing the need for change</li>
-        <li><strong>Preparation</strong> - planning and setting intentions</li>
-        <li><strong>Action</strong> - implementing new behaviors</li>
-        <li><strong>Maintenance</strong> - sustaining positive changes</li>
-      </ul>
-      
-      <h2>Why We Resist Change</h2>
-      <h3>Fear of the Unknown</h3>
-      <p>Our brains are wired to prefer predictability. The unknown triggers our stress response, making change feel threatening even when it's beneficial.</p>
-      
-      <h3>Loss Aversion</h3>
-      <p>We naturally focus more on what we might lose than what we might gain, making it difficult to embrace new opportunities.</p>
-      
-      <h3>Identity Attachment</h3>
-      <p>We often tie our sense of self to our current circumstances, making change feel like a threat to our identity.</p>
-      
-      <h2>Strategies for Embracing Change</h2>
-      <h3>Start Small</h3>
-      <p>Begin with minor adjustments to build confidence and momentum. Small wins create positive associations with change.</p>
-      
-      <h3>Focus on Growth, Not Perfection</h3>
-      <p>View setbacks as learning opportunities rather than failures. Progress is rarely linear.</p>
-      
-      <h3>Build Support Systems</h3>
-      <p>Surround yourself with people who encourage your growth and understand your journey.</p>
-      
-      <h3>Practice Self-Compassion</h3>
-      <p>Be patient and kind with yourself as you navigate change. Growth takes time and effort.</p>
-      
-      <h2>Overcoming Resistance</h2>
-      <p>Common barriers include fear of the unknown, perfectionism, and lack of support. Address these by starting small, celebrating progress, and building a supportive community.</p>
-      
-      <p>Remember, personal growth is a lifelong journey. Embrace change as an opportunity to become the person you're meant to be.</p>
-    `,
-  },
-  {
-    id: 5,
-    title: "Digital Wellness: Managing Screen Time and Mental Health",
-    summary:
-      "Explore the relationship between digital consumption and mental wellbeing, with practical strategies for creating healthier technology habits.",
-    category: "Mental Health",
-    tags: ["digital wellness", "mental health", "technology"],
-    previewImage:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop",
-    date: "2024-12-20",
-    readTime: "5 min read",
-    content: `
-      <div class="post-meta" style="display: flex; gap: 16px; margin-bottom: 24px; font-size: 14px; color: var(--color-text-secondary);">
-        <span class="post-date">December 20, 2024</span>
-        <span class="post-read-time">5 min read</span>
-        <span class="post-category" style="background: var(--color-bg-1); padding: 4px 8px; border-radius: 12px;">Mental Health</span>
-      </div>
-      <h1 style="margin-bottom: 24px; color: var(--color-text);">Digital Wellness: Managing Screen Time and Mental Health</h1>
-      
-      <p>While technology offers incredible benefits, excessive screen time and social media use can negatively impact our mental health, sleep, and relationships.</p>
-      
-      <h2>Signs of Digital Overwhelm</h2>
-      <ul>
-        <li><strong>Sleep Disruption</strong> - difficulty falling asleep after screen use</li>
-        <li><strong>Social Comparison</strong> - feeling inadequate after social media browsing</li>
-        <li><strong>Attention Issues</strong> - difficulty concentrating without digital stimulation</li>
-        <li><strong>FOMO</strong> - fear of missing out driving compulsive checking</li>
-      </ul>
-      
-      <h2>The Impact on Mental Health</h2>
-      <h3>Dopamine and Digital Addiction</h3>
-      <p>Social media and apps are designed to trigger dopamine releases, creating patterns similar to addiction. Understanding this can help us make more conscious choices.</p>
-      
-      <h3>Comparison and Self-Esteem</h3>
-      <p>Constant exposure to curated content can lead to unrealistic comparisons and decreased self-esteem, particularly among young people.</p>
-      
-      <h3>Sleep and Circadian Rhythms</h3>
-      <p>Blue light exposure, especially in the evening, can disrupt our natural sleep patterns and overall wellbeing.</p>
-      
-      <h2>Creating Digital Balance</h2>
-      <h3>Set Boundaries</h3>
-      <p>Create technology-free zones in your home and establish specific times for checking devices.</p>
-      
-      <h3>Practice Mindful Consumption</h3>
-      <p>Before reaching for your phone, pause and ask yourself what you're hoping to achieve. Choose intentionality over mindless scrolling.</p>
-      
-      <h3>Prioritize Real-World Connections</h3>
-      <p>Make time for face-to-face interactions and activities that don't involve screens.</p>
-      
-      <h3>Use Technology Tools Wisely</h3>
-      <p>Leverage apps and settings that support your digital wellness goals, such as screen time trackers and notification management.</p>
-      
-      <p>Establish technology-free zones, practice mindful consumption, and prioritize real-world connections and activities for improved mental wellbeing.</p>
-      
-      <p>Remember, the goal isn't to eliminate technology but to create a healthier relationship with it that supports your overall wellbeing.</p>
-    `,
-  },
-  {
-    id: 6,
-    title: "The Power of Emotional Intelligence in Leadership",
-    summary:
-      "Discover how developing emotional intelligence can enhance your leadership capabilities and create more positive, productive work environments.",
-    category: "Workplace",
-    tags: ["emotional intelligence", "leadership", "workplace"],
-    previewImage:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop",
-    date: "2024-12-15",
-    readTime: "8 min read",
-    content: `
-      <div class="post-meta" style="display: flex; gap: 16px; margin-bottom: 24px; font-size: 14px; color: var(--color-text-secondary);">
-        <span class="post-date">December 15, 2024</span>
-        <span class="post-read-time">8 min read</span>
-        <span class="post-category" style="background: var(--color-bg-2); padding: 4px 8px; border-radius: 12px;">Workplace</span>
-      </div>
-      <h1 style="margin-bottom: 24px; color: var(--color-text);">The Power of Emotional Intelligence in Leadership</h1>
-      
-      <p>Emotional intelligence (EI) is the ability to recognize, understand, and manage our own emotions while effectively responding to others' emotions.</p>
-      
-      <h2>Four Domains of EI</h2>
-      <ul>
-        <li><strong>Self-Awareness</strong> - understanding your emotional patterns</li>
-        <li><strong>Self-Management</strong> - regulating emotions and reactions</li>
-        <li><strong>Social Awareness</strong> - reading others' emotions and needs</li>
-        <li><strong>Relationship Management</strong> - influencing and inspiring others</li>
-      </ul>
-      
-      <h2>Why EI Matters in Leadership</h2>
-      <h3>Building Trust and Rapport</h3>
-      <p>Leaders with high emotional intelligence create psychological safety, making team members feel valued and understood.</p>
-      
-      <h3>Better Decision Making</h3>
-      <p>EI helps leaders consider both logical and emotional factors when making decisions, leading to more comprehensive solutions.</p>
-      
-      <h3>Conflict Resolution</h3>
-      <p>Emotionally intelligent leaders can navigate conflicts more effectively by understanding different perspectives and managing tensions.</p>
-      
-      <h2>Developing Your Emotional Intelligence</h2>
-      <h3>Practice Self-Reflection</h3>
-      <p>Regular self-assessment helps you understand your emotional triggers and patterns.</p>
-      
-      <h3>Seek Feedback</h3>
-      <p>Ask trusted colleagues for honest feedback about your emotional responses and leadership style.</p>
-      
-      <h3>Develop Empathy</h3>
-      <p>Practice putting yourself in others' shoes and trying to understand their perspectives and feelings.</p>
-      
-      <h3>Manage Stress Effectively</h3>
-      <p>Develop healthy coping mechanisms for stress to maintain emotional balance under pressure.</p>
-      
-      <h2>EI in Leadership Practice</h2>
-      <p>Leaders with high emotional intelligence create psychological safety, inspire trust, and foster collaboration. They demonstrate empathy, manage conflict effectively, and adapt their communication style to different team members.</p>
-      
-      <p>Remember, developing emotional intelligence is a lifelong journey that requires consistent practice and self-reflection. The investment in your EI will pay dividends in all areas of your life.</p>
-    `,
-  },
+  id: 4,
+  title: "Parents Being First-Time Parents: A Glimpse into Parenting Before and After the 20th Century",
+  summary: "Explore how first-time parenting has transformed from communal survival strategies of the past to today’s digital age of instant information—and discover what remains timeless in the journey of raising children.",
+  category: "Relationships",
+  tags: ["parenting", "history", "first-time parents", "family evolution", "childcare"],
+  previewImage: "./img/parenting/cover.png",
+  date: "2025-08-16",
+  readTime: "10 min read",
+  content: `
+    <article class="post" id="post-parenting-evolution">
+      <header class="post-header">
+        <h1 class="post-title">Parents Being First-Time Parents: A Glimpse into Parenting Before and After the 20th Century</h1>
+        <p class="post-meta">
+          <time datetime="2025-08-16">August&nbsp;16,&nbsp;2025</time> • 10&nbsp;min read
+        </p>
+      </header>
+
+       <figure class="post-hero">
+        <img src="./img/parenting/top.png"
+             alt="Man in emotional contemplation showing vulnerability" 
+             loading="lazy"
+             onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/ae3fc0c8-2dfa-4232-ae58-07455308ad9c.png'" />
+        <figcaption class="sr-only">Professional representation of male emotional vulnerability</figcaption>
+      </figure>
+
+      <section class="post-section">
+        <h2>Introduction</h2>
+        <p>Becoming a parent for the first time is a thrilling and nerve-wracking experience. But what if you could take a step back and look at how parenting has evolved over time? How did the expectations, resources, and practices differ before and after the 20th century? Let's take a journey through the transformation of parenthood from the struggles of the past to the advancements of today.</p>
+      </section>
+
+      <section class="post-section">
+        <h2>Parenting Before the 20th Century: A Different World</h2>
+        <p>Parenting in pre-20th century societies was shaped by practicality, survival, and community. In the past, the concept of "first-time parenting" wasn’t as singular as it is today. Most parents, particularly mothers, grew up in large extended families and were often surrounded by older relatives who could help guide them. The role of the family as a unit was paramount, and child-rearing was often seen as a communal responsibility, not an individual one.</p>
+      </section>
+
+      <section class="post-section">
+        <h3>Limited Resources, Yet Strong Support Systems</h3>
+        <p>Before the advent of modern medicine and technology, raising children was an immensely challenging task. Parents did not have the same access to information about child development or health that we do today. Many relied on intuition, tradition, and advice passed down through generations. Birth rates were high, and the risk of infant mortality was also significantly higher. A mother's first pregnancy might have been viewed with less anxiety simply because there were few modern resources to worry about it was about surviving and pushing through.</p>
+        <p>But on the other hand, these parents were often more dependent on communal knowledge. In rural communities, a mother-to-be might have learned from the women around her, gaining first hand insights and advice from mothers, grandmothers, and aunts who had experienced similar circumstances.</p>
+      </section>
+
+      <section class="post-section">
+        <h2>Parenting in the 20th Century: The Rise of the Expert</h2>
+        <p>The 20th century ushered in significant changes, especially with the advent of modern medicine, psychology, and education. These shifts drastically altered the way parents approached raising children. First-time parents no longer just relied on their instincts and community advice; they had new options available: books, classes, and even pediatric specialists.</p>
+
+        <h3>Medical Advances</h3>
+        <p>In the early 1900s, advancements in obstetrics and pediatric care drastically reduced infant mortality rates, making childbirth safer for mothers and babies. The development of vaccines, antibiotics, and neonatal care brought about profound shifts in how parents viewed health and safety. As a result, parents began to feel a new responsibility to educate themselves, often seeking out resources to ensure they were giving their children the best possible start in life.</p>
+
+        <h3>The Nuclear Family and Isolation</h3>
+        <p>The 20th century also saw the rise of the nuclear family, particularly in the West. This structure, which emphasized the isolated family unit of mother, father, and children, left many first-time parents without the same support network that previous generations had. With fewer extended families living in close proximity, parents were often left to navigate the journey of parenthood on their own. This contributed to a rise in the feeling of "parenting anxiety," with new parents seeking guidance from books and professionals.</p>
+      </section>
+
+      <section class="post-section">
+        <h2>Parenting Today: The Digital Revolution and the Quest for Balance</h2>
+        <p>Fast forward to the present day, and we see an entirely different landscape for first-time parents. Technological advancements and the rise of social media have dramatically changed how we approach raising children.</p>
+
+        <h3>Instant Information and Overwhelm</h3>
+        <p>In the age of the internet, a first-time parent is bombarded with information — articles, blog posts, YouTube channels, and parenting forums are available at the touch of a button. The downside? The overload of information can be overwhelming. One parent’s solution may be another’s nightmare, and the pressure to "do it all right" has never been greater.</p>
+        <p>Parents today can access professional advice instantly, sometimes from the comfort of their homes, via online consultations or parenting apps. Virtual communities have sprung up to replace the communal wisdom of extended families, but in many cases, this has led to a feeling of isolation. Despite the wealth of information available, many parents feel more uncertain and anxious than ever before, perhaps because they no longer have that face-to-face support system that older generations relied on.</p>
+
+        <h3>Work-Life Balance</h3>
+        <p>With the rise of dual-income households and the demands of modern life, many parents today are trying to juggle both work and child-rearing responsibilities. Flexible work arrangements and remote work have made it easier to balance, but the expectation to "have it all" — a successful career, a happy family, and personal well-being — is undoubtedly one of the most significant sources of stress for new parents in the 21st century.</p>
+
+        <h3>Parenting as a Shared Experience</h3>
+        <p>One positive trend in modern parenting is the increasing involvement of fathers and partners. The idea of shared parenting has gained traction, with many fathers actively participating in day-to-day care and decision-making. This shift has not only made the burden of child-rearing more balanced, but it has also helped foster stronger family dynamics and support for the mother. This type of collaborative approach was less common in earlier eras, where gender roles often assigned parenting tasks primarily to mothers.</p>
+      </section>
+
+      <section class="post-section">
+        <h2>Final Thoughts: The Ever-Evolving Journey</h2>
+        <p>Whether before the 20th century or in today's fast-paced, tech-driven world, parenting remains a deeply personal journey, with each generation adapting to new challenges and embracing new opportunities. While first-time parents in the past may have had different resources and experiences than we do today, the core of parenting — love, care, and devotion to your child has remained unchanged.</p>
+        <p>The evolution of parenting shows us that while times may change, the journey of raising children is still as transformative and rewarding as ever. The role of the first-time parent continues to evolve, but it’s always marked by the same mix of excitement, uncertainty, and immeasurable joy. Whether you're turning to a trusted family member, a doctor, or an online forum, one thing remains certain: you're not alone on this incredible adventure.</p>
+      </section>
+    </article>
+  `
+}
 ];
 
 // Application State
@@ -787,20 +746,38 @@ function setupEventListeners() {
       }
     });
   }
+  
+// Select all share buttons
+const shareButtons = document.querySelectorAll(".share-btn");
 
-  // Share buttons
-  const shareButtons = document.querySelectorAll(".share-btn");
-  shareButtons.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
+shareButtons.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
 
-      const originalText = btn.innerHTML;
-      btn.innerHTML = btn.innerHTML.replace(/Share|Save/, "Done!");
-      setTimeout(() => {
-        btn.innerHTML = originalText;
-      }, 1500);
-    });
+    const currentUrl = window.location.href;
+    const originalHTML = btn.innerHTML;
+
+    // Change button text to Done!
+    btn.innerHTML = originalHTML.replace(/Share|Save/, "Done!");
+
+    // Open WhatsApp share in a new tab
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(currentUrl)}`;
+    window.open(whatsappUrl, "_blank");
+
+    // Show Instagram share message (replace with your preferred UI method)
+    setTimeout(() => {
+      alert(
+        "Instagram does not support direct web sharing. Please copy the link and share it on Instagram manually."
+      );
+    }, 500);
+
+    // Revert button text back after 1.5 seconds
+    setTimeout(() => {
+      btn.innerHTML = originalHTML;
+    }, 1500);
   });
+});
+
 }
 
 // Initialize Application
