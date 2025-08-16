@@ -1,349 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Talk2Moon - Psychology & Mental Health Blog</title>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talk2Moon - Psychology & Mental Health Blog</title>
   <link rel="icon" type="image/x-icon" href="./img/favicon.png">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <div class="header-content">
-          <div class="brand">
-            <div class="logo">🌙</div>
-            <h1 class="site-title">Talk2Moon</h1>
-          </div>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="book-preview-styles.css" />
+</head>
 
-          <nav class="nav" id="nav">
-            <a href="#home" class="nav-link active">Home</a>
-            <a href="#blog" class="nav-link">Blog</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#contact" class="nav-link">Contact</a>
-          </nav>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="brand">
+          <div class="logo">🌙</div>
+          <h1 class="site-title">Talk2Moon</h1>
+        </div>
 
-          <div class="header-controls">
-            <button
-              class="theme-toggle"
-              id="themeToggle"
-              aria-label="Toggle theme"
-            >
-              <div class="toggle-track">
-                <div class="toggle-thumb">
-                  <span class="sun-icon">☀️</span>
-                  <span class="moon-icon">🌙</span>
-                </div>
+        <nav class="nav" id="nav">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#blog" class="nav-link">Blog</a>
+          <a href="#book" class="nav-link">Featured Book</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-controls">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <div class="toggle-track">
+              <div class="toggle-thumb">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
               </div>
-            </button>
+            </div>
+          </button>
 
-            <button
-              class="mobile-menu-toggle"
-              id="mobileMenuToggle"
-              aria-label="Toggle menu"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- Main Content Container -->
-    <main class="main-content" id="about">
-      <!-- Home View -->
-      <div id="homeView" class="view active">
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-          <div class="container">
-            <div class="hero-content">
-              <div class="profile-section">
-                <div class="profile-image">
-                  <img
-                    src="img/moon.png"
-                    alt="Somavathi - Psychology Connoisseur"
-                    loading="lazy"
-                  />
-                </div>
-
-                <div class="profile-info">
-                  <h1 class="profile-name">Somavathi</h1>
-                  <h2 class="profile-title">Psychology Connoisseur</h2>
-                  <p class="profile-description">
-                    Hi! I'm Somavathi, a lifelong enthusiast of human behavior
-                    and wellbeing. With a foundation in human resources and a
-                    keen interest in psychology, I'm passionate about exploring
-                    how positive insights can support growth, connection, and
-                    thriving communities both in and beyond the workplace.
-                  </p>
-
-                  <div class="credentials">
-                    <span class="credential"
-                      >Background in Human Resources</span
-                    >
-                    <span class="credential">Psychology Explorer</span>
-                    <span class="credential">Wellbeing Advocate</span>
-                  </div>
-
-                  <button class="cta-button" id="exploreBtn">
-                    <span>Explore Articles</span>
-                    <svg
-                      class="cta-arrow"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M7 17L17 7M17 7H7M17 7V17"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Blog Section -->
-        <section id="blog" class="blog-section">
-          <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">Latest Articles</h2>
-              <p class="section-subtitle">
-                Insights and guidance for mental wellness and personal growth
-              </p>
-            </div>
-
-            <div class="filter-buttons">
-              <button class="filter-btn active" data-filter="all">All</button>
-              <button class="filter-btn" data-filter="Mental Health">
-                Mental Health
-              </button>
-              <button class="filter-btn" data-filter="Workplace">
-                Workplace
-              </button>
-              <button class="filter-btn" data-filter="Relationships">
-                Relationships
-              </button>
-              <button class="filter-btn" data-filter="Personal Growth">
-                Personal Growth
-              </button>
-            </div>
-
-            <div id="blogCardsContainer" class="blog-cards-container">
-              <!-- Blog cards will be injected here by JavaScript -->
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <!-- Blog Post View -->
-      <div id="postView" class="view">
+  <!-- Main Content Container -->
+  <main class="main-content" id="about">
+    <!-- Home View -->
+    <div id="homeView" class="view active">
+      <!-- Hero Section -->
+      <section id="home" class="hero">
         <div class="container">
-          <div class="post-header">
-            <button class="back-btn" id="backBtn">
-              <svg
-                class="back-icon"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M19 12H5M12 19L5 12L12 5"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <span>Back to Articles</span>
-            </button>
-          </div>
+          <div class="hero-content">
+            <div class="profile-section">
+              <div class="profile-image">
+                <img src="img/moon.png" alt="Somavathi - Psychology Connoisseur" loading="lazy" />
+              </div>
 
-          <article id="postContent" class="blog-post">
-            <!-- Blog post content will be injected here -->
-          </article>
+              <div class="profile-info">
+                <h1 class="profile-name">Somavathi</h1>
+                <h2 class="profile-title">Psychology Connoisseur</h2>
+                <p class="profile-description">
+                  Hi! I'm Somavathi, a lifelong enthusiast of human behavior
+                  and wellbeing. With a foundation in human resources and a
+                  keen interest in psychology, I'm passionate about exploring
+                  how positive insights can support growth, connection, and
+                  thriving communities both in and beyond the workplace.
+                </p>
 
-          <div style="margin-top: 2rem" class="post-footer">
-            <div class="post-navigation">
-              <button class="nav-post-btn" id="prevPostBtn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M15 18L9 12L15 6"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <span>Previous Article</span>
-              </button>
-              <button class="nav-post-btn" id="nextPostBtn">
-                <span>Next Article</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M9 18L15 12L9 6"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-            </div>
+                <div class="credentials">
+                  <span class="credential">Background in Human Resources</span>
+                  <span class="credential">Psychology Explorer</span>
+                  <span class="credential">Wellbeing Advocate</span>
+                </div>
 
-            <div class="share-section">
-              <h3>Share this article</h3>
-              <div class="share-buttons">
-                <button class="share-btn">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M18 2H6a2 2 0 0 0-2 2v16l4-4h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
+                <button class="cta-button" id="exploreBtn">
+                  <span>Explore Articles</span>
+                  <svg class="cta-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
                   </svg>
-                  Share
-                </button>
-                <button class="share-btn">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  Save
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container" id="contact">
-        <div class="footer-content">
-          <div class="footer-brand-section">
-            <div class="footer-brand">
-              <div class="logo">🌙</div>
-              <span class="brand-name">Talk2Moon</span>
+      </section>
+      <section id="book" class="book-announcement">
+        <div class="container">
+          <div class="book-content">
+            <!-- Cover Image -->
+            <div class="book-cover">
+              <img src="poster2.png" alt="Stop Rushing Life Book Cover" loading="lazy" />
             </div>
-            <p class="footer-description">
-              Professional psychology and mental health resources for healing,
-              growth, and wellbeing. Discover insights that support your journey
-              to emotional wellness.
-            </p>
-            <div class="footer-links">
-              <a href="#privacy" class="footer-link">Privacy Policy</a>
-              <a href="#terms" class="footer-link">Terms of Service</a>
-              <a href="#contact" class="footer-link">Contact</a>
+            <!-- Book Info -->
+            <div class="book-info">
+              <div class="book-badge">📚 Featured Book</div>
+              <h3 class="book-title">Why It's Okay to Be Lost in Your 20's</h3>
+              <h2 class="book-subtitle">Stop Rushing Life!</h2>
+              <p class="book-author">by Sowmiya Venkatachalam</p>
+              <p class="book-description">
+                A compassionate guide for twentysomethings feeling pressured to have it all figured out.
+                This book offers practical wisdom for embracing uncertainty, finding your authentic path,
+                and understanding that being 'lost' is often the first step to being found.
+              </p>
+              <!-- Buttons -->
+              <div class="book-cta">
+                <button class="preview-btn" id="previewBookBtn">
+                  📖 Preview Sample Chapters
+                </button>
+                <button class="coming-soon-btn" disabled>
+                  🚀 Coming Soon to Kindle
+                </button>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="footer-author" >
-            <div class="author-info">
-              <div class="author-avatar">
-                <img src="img/moon.png" alt="Somavathi" loading="lazy" />
-              </div>
-              <div class="author-text">
-                <h3>Somavathi</h3>
-                <p class="author-title">Psychology Connoisseur</p>
-              </div>
-            </div>
-            <p class="author-description">
-              Dedicated to helping you find your path to wellness through
-              positive insights, growth, and meaningful connections. Join me on
-              this journey of discovery.
+      <!-- ======= PDF Modal ======= -->
+      <div id="pdfModal" class="pdf-modal" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
+        <div id="pdfModalContent" class="pdf-modal-content">
+          <div class="pdf-modal-header">
+            <h3 id="pdfModalTitle" class="pdf-modal-title">📖 Stop Rushing Life! – Sample Preview</h3>
+            <button id="closePdfModal" class="pdf-close-btn" aria-label="Close Preview">×</button>
+          </div>
+          <div id="pdfLoading" class="pdf-loading">🌙 Loading your book preview…</div>
+          <iframe id="pdfViewer" class="pdf-viewer" src="sample.pdf" hidden></iframe>
+        </div>
+      </div>
+
+
+      <!-- Blog Section -->
+      <section id="blog" class="blog-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Latest Articles</h2>
+            <p class="section-subtitle">
+              Insights and guidance for mental wellness and personal growth
             </p>
-            <div class="social-links">
-              <a
-                href="https://www.linkedin.com/in/sowmiya-v-31212a264/"
-                class="social-link"
-                target="_blank"
-                rel="noopener"
-                aria-label="LinkedIn"
-              >
+          </div>
+
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Mental Health">
+              Mental Health
+            </button>
+            <button class="filter-btn" data-filter="Workplace">
+              Workplace
+            </button>
+            <button class="filter-btn" data-filter="Relationships">
+              Relationships
+            </button>
+            <button class="filter-btn" data-filter="Personal Growth">
+              Personal Growth
+            </button>
+          </div>
+
+          <div id="blogCardsContainer" class="blog-cards-container">
+            <!-- Blog cards will be injected here by JavaScript -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Blog Post View -->
+    <div id="postView" class="view">
+      <div class="container">
+        <div class="post-header">
+          <button class="back-btn" id="backBtn">
+            <svg class="back-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <span>Back to Articles</span>
+          </button>
+        </div>
+
+        <article id="postContent" class="blog-post">
+          <!-- Blog post content will be injected here -->
+        </article>
+
+        <div style="margin-top: 2rem" class="post-footer">
+          <div class="post-navigation">
+            <button class="nav-post-btn" id="prevPostBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <span>Previous Article</span>
+            </button>
+            <button class="nav-post-btn" id="nextPostBtn">
+              <span>Next Article</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="share-section">
+            <h3>Share this article</h3>
+            <div class="share-buttons">
+              <button class="share-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M18 2H6a2 2 0 0 0-2 2v16l4-4h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Share
+              </button>
+              <button class="share-btn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                   <path
-                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <rect
-                    x="2"
-                    y="9"
-                    width="4"
-                    height="12"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <circle
-                    cx="4"
-                    cy="4"
-                    r="2"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-              </a>
-              <a
-                href="https://www.instagram.com/_talktomoon._/"
-                class="social-link"
-                target="_blank"
-                rel="noopener"
-                aria-label="Instagram"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <rect
-                    x="2"
-                    y="2"
-                    width="20"
-                    height="20"
-                    rx="5"
-                    ry="5"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <line
-                    x1="17.5"
-                    y1="6.5"
-                    x2="17.51"
-                    y2="6.5"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-              <!-- <a
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container" id="contact">
+      <div class="footer-content">
+        <div class="footer-brand-section">
+          <div class="footer-brand">
+            <div class="logo">🌙</div>
+            <span class="brand-name">Talk2Moon</span>
+          </div>
+          <p class="footer-description">
+            Professional psychology and mental health resources for healing,
+            growth, and wellbeing. Discover insights that support your journey
+            to emotional wellness.
+          </p>
+          <div class="footer-links">
+            <a href="#privacy" class="footer-link">Privacy Policy</a>
+            <a href="#terms" class="footer-link">Terms of Service</a>
+            <a href="#contact" class="footer-link">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-author">
+          <div class="author-info">
+            <div class="author-avatar">
+              <img src="img/moon.png" alt="Somavathi" loading="lazy" />
+            </div>
+            <div class="author-text">
+              <h3>Somavathi</h3>
+              <p class="author-title">Psychology Connoisseur</p>
+            </div>
+          </div>
+          <p class="author-description">
+            Dedicated to helping you find your path to wellness through
+            positive insights, growth, and meaningful connections. Join me on
+            this journey of discovery.
+          </p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/sowmiya-v-31212a264/" class="social-link" target="_blank"
+              rel="noopener" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/_talktomoon._/" class="social-link" target="_blank" rel="noopener"
+              aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <!-- <a
                 href="#twitter"
                 class="social-link"
                 target="_blank"
@@ -360,27 +302,28 @@
                   />
                 </svg>
               </a> -->
-            </div>
           </div>
         </div>
-
-        <div class="footer-bottom">
-          <p>
-            &copy; 2025 Talk2Moon. All Mental rights reserved. Made with 💙 for
-            mental wellness. By alan
-          </p>
-        </div>
       </div>
-    </footer>
 
-    <!-- Loading Animation -->
-    <div class="loading-overlay" id="loadingOverlay">
-      <div class="loading-spinner">
-        <div class="spinner-circle"></div>
-        <p>Loading...</p>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Talk2Moon. All Mental rights reserved. Made with 💙 for
+          mental wellness. By alan
+        </p>
       </div>
     </div>
+  </footer>
 
-    <script src="app.js"></script>
-  </body>
+  <!-- Loading Animation -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-spinner">
+      <div class="spinner-circle"></div>
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
 </html>

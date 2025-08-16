@@ -449,6 +449,97 @@ const blogPosts = [
 }
 ];
 
+// Select elements
+const openBtn = document.getElementById('previewBookBtn'); // trigger button
+const modal = document.getElementById('pdfModal');         // overlay container
+const modalContent = document.getElementById('pdfModalContent'); // modal box
+const closeBtn = document.getElementById('closePdfModal'); // close button
+const pdfViewer = document.getElementById('pdfViewer');
+const pdfLoading = document.getElementById('pdfLoading');
+document.body.classList.add('modal-open');   // when opening modal
+document.body.classList.remove('modal-open'); // when closing modal
+
+
+let lastFocusedElement = null; // store to restore focus later
+
+// Function to open the modal
+function openModal() {
+  lastFocusedElement = document.activeElement; // store the element that had focus
+  modal.classList.add('active');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+
+  // Show loader, hide iframe until loaded
+  pdfLoading.style.display = 'block';
+  pdfViewer.style.display = 'none';
+
+  // Reload PDF
+  pdfViewer.src = 'sample.pdf';
+  pdfViewer.onload = () => {
+    pdfLoading.style.display = 'none';
+    pdfViewer.style.display = 'block';
+  };
+
+  // Give initial focus (goes to close button for accessibility)
+  setTimeout(() => closeBtn.focus(), 50);
+}
+
+// Function to close the modal
+function closeModal() {
+  modal.classList.remove('active');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+
+  // Empty iframe src to stop background fetch
+  pdfViewer.src = '';
+
+  // Restore focus back to the button that opened it
+  if (lastFocusedElement) {
+    lastFocusedElement.focus();
+  }
+}
+
+// Open modal when the button is clicked
+openBtn.addEventListener('click', openModal);
+
+// Close modal when clicking the close button
+closeBtn.addEventListener('click', closeModal);
+
+// Close modal when clicking outside modal content
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    closeModal();
+  }
+});
+
+// Close modal when pressing Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal.classList.contains('active')) {
+    closeModal();
+  }
+});
+
+// Optional: Trap focus within modal while open
+modal.addEventListener('keydown', (e) => {
+  if (e.key === 'Tab' && modal.classList.contains('active')) {
+    const focusableEls = modalContent.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const focusArray = Array.from(focusableEls);
+    const firstEl = focusArray[0];
+    const lastEl = focusArray[focusArray.length - 1];
+
+    if (e.shiftKey && document.activeElement === firstEl) {
+      e.preventDefault();
+      lastEl.focus(); // go back to last focusable
+    } else if (!e.shiftKey && document.activeElement === lastEl) {
+      e.preventDefault();
+      firstEl.focus(); // loop back to first
+    }
+  }
+});
+
+
 // Application State
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 let currentTheme = prefersDark ? "dark" : "light";
@@ -746,6 +837,8 @@ function setupEventListeners() {
       }
     });
   }
+
+  
   
 // Select all share buttons
 const shareButtons = document.querySelectorAll(".share-btn");
@@ -779,6 +872,8 @@ shareButtons.forEach((btn) => {
 });
 
 }
+
+
 
 // Initialize Application
 function initApp() {
