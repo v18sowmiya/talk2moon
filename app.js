@@ -266,15 +266,15 @@ const blogPosts = [
   `,
   },
   {
-  id: 3,
-  title: "The Art of Crying for Men: Why the Strongest Men Are the Ones Who Dare to Cry",
-  summary: "Society teaches men that tears are weakness. But the strongest men know the truth: vulnerability isn't fragility—it's courage, and it heals everything.",
-  category: "Relationships",
-  tags: ["male mental health", "emotional vulnerability", "masculinity", "crying", "emotional healing"],
-  previewImage: "https://imgs.search.brave.com/Q06IpriAy25xKuu-DbJhQ11-40dv8sFAya5dQQCGVmY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9kZXByZXNzZWQt/bWFuLWNyeWluZy1z/aWRlLXZpZXdfNzM4/OTktOTk1Ni5qcGc_/c2VtdD1haXNfaHli/cmlkJnc9NzQw",
-  date: "2025-01-16",
-  readTime: "12 min read",
-  content: `
+    id: 3,
+    title: "The Art of Crying for Men: Why the Strongest Men Are the Ones Who Dare to Cry",
+    summary: "Society teaches men that tears are weakness. But the strongest men know the truth: vulnerability isn't fragility—it's courage, and it heals everything.",
+    category: "Relationships",
+    tags: ["male mental health", "emotional vulnerability", "masculinity", "crying", "emotional healing"],
+    previewImage: "https://imgs.search.brave.com/Q06IpriAy25xKuu-DbJhQ11-40dv8sFAya5dQQCGVmY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9kZXByZXNzZWQt/bWFuLWNyeWluZy1z/aWRlLXZpZXdfNzM4/OTktOTk1Ni5qcGc_/c2VtdD1haXNfaHli/cmlkJnc9NzQw",
+    date: "2025-01-16",
+    readTime: "12 min read",
+    content: `
     <article class="post" id="post-crying-men">
       <header class="post-header">
         <h1 class="post-title">The Art of Crying for Men</h1>
@@ -370,17 +370,17 @@ const blogPosts = [
       </section>
     </article>
   `
-},
+  },
   {
-  id: 4,
-  title: "Parents Being First-Time Parents: A Glimpse into Parenting Before and After the 20th Century",
-  summary: "Explore how first-time parenting has transformed from communal survival strategies of the past to today’s digital age of instant information—and discover what remains timeless in the journey of raising children.",
-  category: "Relationships",
-  tags: ["parenting", "history", "first-time parents", "family evolution", "childcare"],
-  previewImage: "./img/parenting/cover.png",
-  date: "2025-08-16",
-  readTime: "10 min read",
-  content: `
+    id: 4,
+    title: "Parents Being First-Time Parents: A Glimpse into Parenting Before and After the 20th Century",
+    summary: "Explore how first-time parenting has transformed from communal survival strategies of the past to today’s digital age of instant information—and discover what remains timeless in the journey of raising children.",
+    category: "Relationships",
+    tags: ["parenting", "history", "first-time parents", "family evolution", "childcare"],
+    previewImage: "./img/parenting/cover.png",
+    date: "2025-08-16",
+    readTime: "10 min read",
+    content: `
     <article class="post" id="post-parenting-evolution">
       <header class="post-header">
         <h1 class="post-title">Parents Being First-Time Parents: A Glimpse into Parenting Before and After the 20th Century</h1>
@@ -446,26 +446,8 @@ const blogPosts = [
       </section>
     </article>
   `
-}
+  }
 ];
-
-const slides = document.querySelectorAll('.slide');
-let currentIndex = 0;
-const slideInterval = 5000; // 5000 ms = 5 seconds
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active-slide', i === index);
-  });
-}
-
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % slides.length;
-  showSlide(currentIndex);
-}
-
-showSlide(currentIndex);
-setInterval(nextSlide, slideInterval);
 
 
 // Select elements
@@ -485,12 +467,12 @@ function openModal() {
   modal.classList.add('active');
   modal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('modal-open');
-document.getElementById('previewBookBtn').addEventListener('click', function() {
-  const modal = document.getElementById('pdfModal');
-  const modalContent = document.getElementById('pdfModalContent');
-  modal.classList.add('active');
-  modalContent.focus(); // Move keyboard focus into dialog
-});
+  document.getElementById('previewBookBtn').addEventListener('click', function () {
+    const modal = document.getElementById('pdfModal');
+    const modalContent = document.getElementById('pdfModalContent');
+    modal.classList.add('active');
+    modalContent.focus(); // Move keyboard focus into dialog
+  });
 
   // Show loader, hide iframe until loaded
   pdfLoading.style.display = 'block';
@@ -507,15 +489,15 @@ document.getElementById('previewBookBtn').addEventListener('click', function() {
   setTimeout(() => closeBtn.focus(), 50);
 }
 
-// Function to close the modal
+// Function to close the modal  
 function closeModal() {
   modal.classList.remove('active');
   modal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('modal-open');
-document.getElementById('closePdfModal').addEventListener('click', function() {
-  document.getElementById('pdfModal').classList.remove('active');
-  document.getElementById('previewBookBtn').focus();
-});
+  document.getElementById('closePdfModal').addEventListener('click', function () {
+    document.getElementById('pdfModal').classList.remove('active');
+    document.getElementById('previewBookBtn').focus();
+  });
 
   // Empty iframe src to stop background fetch
   pdfViewer.src = '';
@@ -659,9 +641,8 @@ function createBlogCard(post) {
   card.setAttribute("data-post-id", post.id);
 
   card.innerHTML = `
-    <img src="${post.previewImage}" alt="${
-    post.title
-  }" class="blog-card-image" loading="lazy">
+    <img src="${post.previewImage}" alt="${post.title
+    }" class="blog-card-image" loading="lazy">
     <div class="blog-card-content">
       <div class="blog-card-meta">
         <span>${post.date}</span>
@@ -865,38 +846,38 @@ function setupEventListeners() {
     });
   }
 
-  
-  
-// Select all share buttons
-const shareButtons = document.querySelectorAll(".share-btn");
 
-shareButtons.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
 
-    const currentUrl = window.location.href;
-    const originalHTML = btn.innerHTML;
+  // Select all share buttons
+  const shareButtons = document.querySelectorAll(".share-btn");
 
-    // Change button text to Done!
-    btn.innerHTML = originalHTML.replace(/Share|Save/, "Done!");
+  shareButtons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
 
-    // Open WhatsApp share in a new tab
-    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(currentUrl)}`;
-    window.open(whatsappUrl, "_blank");
+      const currentUrl = window.location.href;
+      const originalHTML = btn.innerHTML;
 
-    // Show Instagram share message (replace with your preferred UI method)
-    setTimeout(() => {
-      alert(
-        "Instagram does not support direct web sharing. Please copy the link and share it on Instagram manually."
-      );
-    }, 500);
+      // Change button text to Done!
+      btn.innerHTML = originalHTML.replace(/Share|Save/, "Done!");
 
-    // Revert button text back after 1.5 seconds
-    setTimeout(() => {
-      btn.innerHTML = originalHTML;
-    }, 1500);
+      // Open WhatsApp share in a new tab
+      const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(currentUrl)}`;
+      window.open(whatsappUrl, "_blank");
+
+      // Show Instagram share message (replace with your preferred UI method)
+      setTimeout(() => {
+        alert(
+          "Instagram does not support direct web sharing. Please copy the link and share it on Instagram manually."
+        );
+      }, 500);
+
+      // Revert button text back after 1.5 seconds
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+      }, 1500);
+    });
   });
-});
 
 }
 
