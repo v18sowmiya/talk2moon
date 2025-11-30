@@ -878,7 +878,6 @@ select.form-control {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
   font-family: var(--font-family-base);
-  cursor: not-allowed;
   backdrop-filter: blur(10px);
 }
 
@@ -1309,7 +1308,7 @@ body.modal-open {
   font-size: 1rem;
   font-weight: 550;
   opacity: 0.65;
-  cursor: not-allowed;
+  cursor: pointer;
 }
 
 /* ==== Responsive ==== */
